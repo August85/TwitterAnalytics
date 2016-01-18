@@ -2,6 +2,7 @@ This project aims to perform various kinds of analysis on twitter feeds.
 1: Real time analysis on any topic/person/hashtag.
 2: Batch mode analysis on any topic/person/hashtag.
 3: Sentiment analysis of tweets. (by topic/person/hashtag)
+4: Various visualizations based upon the analysis.
 
 
 Note: Since, we're not allowed to store twitter data for more than 24 hours, all the batch-mode operations will have a window of 24 hours only.

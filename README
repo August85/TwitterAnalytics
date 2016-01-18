@@ -7,3 +7,5 @@ This project aims to perform various kinds of analysis on twitter feeds.
 
 Note: Since, we're not allowed to store twitter data for more than 24 hours, all the batch-mode operations will have a window of 24 hours only.
 
+The current version of application is deployed at the following URL:
+        https://twitter-sentiment-analysis-py.appspot.com

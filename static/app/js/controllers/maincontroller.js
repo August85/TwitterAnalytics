@@ -15,9 +15,9 @@ angular.module("Pragrammar", ['flow', 'hServices', 'ngRoute', 'ngProgress', 'ngT
         });
 
         $routeProvider
-		.when('/Home', {
-			templateUrl: 'app/partials/home/home.html',
-			controller: HomeCtrl
+		.when('/Dashboard', {
+			templateUrl: 'app/partials/dashboard/dashboard.html',
+			controller: DashboardCtrl
 		})
 		$routeProvider
 		.when('/Java', {
@@ -30,7 +30,7 @@ angular.module("Pragrammar", ['flow', 'hServices', 'ngRoute', 'ngProgress', 'ngT
 			controller: AndroidCtrl
 		})
 		.otherwise({
-			redirectTo: '/Home'
+			redirectTo: '/Dashboard'
 		})
 
 		//$locationProvider.html5Mode(true);
@@ -38,12 +38,12 @@ angular.module("Pragrammar", ['flow', 'hServices', 'ngRoute', 'ngProgress', 'ngT
 }]).
     controller("Ctrl", function($scope, $rootScope, $timeout, HomeServices, $q, $location, State , toaster) {
             $scope.menuItems = [
-                    {"name" : "Home", "isActive": "active", "href": "Home"},
+                    {"name" : "Dashboard", "isActive": "active", "href": "Dashboard"},
                     {"name" : "Java", "isActive" : "", "href": "Java"},
                     {"name" : "Android", "isActive" : "", "href": "Android"}];
             $scope.$on('$routeChangeSuccess', function() {
                     $scope.menuActive = $location.path().split("/")[1];
-                    if($scope.menuActive == "") { $scope.menuActive = "Home";}
+                    if($scope.menuActive == "") { $scope.menuActive = "Dashboard";}
                     for(var item in $scope.menuItems){
                         if ($scope.menuItems[item].name == $scope.menuActive){
                                 $scope.menuItems[item].isActive = "active";
